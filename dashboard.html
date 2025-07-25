@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="IMG/Icons/icon-CapacitacionPerfil.png" type="image/x-icon">
+        <title>Menu Principal | Zona 2</title>
+
+        <!--Iconos a utilizar-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.2/dist/sweetalert2.min.css">
+
+        <link rel="stylesheet" href="CSS/dashboard.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <ul id="listaNav">
+                    <li>
+                        <a href="#" class="logo">
+                            <img src="IMG/CapacitacionPerfil.png" alt="PerfilZona">
+                            <span class="nav-item">Capacitación</span>                            
+                        </a>
+                    </li>
+                    <!--En esta Sección se debe de cargar los Certificados y Accesos Autorizados-->
+                    <li>
+                        <a href="#" class="logout" onclick="desconectar()">
+                            <i class='bx bx-log-out'></i>
+                            <span class="nav-item">Desconectar</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="main" id="section">
+                <div class="main-top">
+                    <h1 id="user">Certificaciones</h1>
+                </div>
+                <!--<div class="taller" id="ADV001">
+                    <div class="content-taller">
+                        <h3>Titulo Taller</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione optio dignissimos? Modi itaque ex maxime id velit laudantium aperiam!</p>
+                        <div class="asignaciones">
+                            <div class="asignacion">
+                                <h4>Realiza el Examen</h4>
+                                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Examen de la Asignación</a>
+                            </div>
+                            <div class="asignacion">
+                                <h4>Realiza la Tarea</h4>
+                                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Decarga la Tarea</a>
+                                <input type="file" id="f-ADV001" accept="application/pdf">
+                                <button onclick="subirArchivo('f-ADV001')">Entregar</button>
+                            </div>
+                        </div>
+                        <button onclick="desactivarSeminario('ADV001')">Cerrar</button>
+                    </div>
+                </div>-->
+            </section>
+        </div>        
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.2/dist/sweetalert2.all.min.js"></script>
+    <script src="JS/actividad.js"></script>
+    <script src="JS/dashboard.js"></script>
+    <script src="JS/navBar.js"></script>
+    <script src="JS/entregarTarea.js"></script>
+</html>
