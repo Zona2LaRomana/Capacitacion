@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("../IMG/CapacitacionPerfil.png") no-repeat;
+    background: url("../IMG/LogoZonal.jpg") no-repeat;
     background-position: center;
     background-size: contain;
     backdrop-filter: blur(7px);
@@ -29,7 +29,7 @@ body{
     margin: 20px 0 40px 0;
 }
 .login-header header{
-    color: #333;
+    color: #fff;
     font-size: 30px;
     font-weight: 600;
 }

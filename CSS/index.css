@@ -9,7 +9,7 @@
 }
 body{
     height: 100vh;
-    background: url("../IMG/FondoDeCapacitacion.png");
+    background: url("../IMG/CapacitaciónLogoRomana.png");
     background-position: center;
     background-size: cover;
 }
@@ -100,7 +100,7 @@ header .navbar{
 }
 @media screen and (max-width: 900px){
     body{
-        background: url("../IMG/CapacitacionPerfil.png");
+        background: url("../IMG/LogoZonal.jpg");
         background-repeat: no-repeat;
         background-size: contain;
     }

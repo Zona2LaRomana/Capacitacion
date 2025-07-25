@@ -69,6 +69,7 @@ nav i{
     text-align: center;
 }
 .nav-item{
+    font-size: smaller;
     position: relative;
     top: 12px;
     margin-left: 10px;
