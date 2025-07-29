@@ -21,6 +21,11 @@ function basicaAvent(){
         ConquistadoresDirector[i].style.display = "none"
     }
 
+    const menuRecursos = document.getElementsByName('menu-recursos')
+    for(let i = 0; i < menuRecursos.length; i++){
+        menuRecursos[i].style.display = "none"
+    }
+
     activacion = 1
 }
 
@@ -43,6 +48,11 @@ function basicaConqui(){
     const ConquistadoresDirector = document.getElementsByName('PAT-Direct')
     for(let i = 0; i < ConquistadoresDirector.length; i++){
         ConquistadoresDirector[i].style.display = "none"
+    }
+
+    const menuRecursos = document.getElementsByName('menu-recursos')
+    for(let i = 0; i < menuRecursos.length; i++){
+        menuRecursos[i].style.display = "none"
     }
 
     activacion = 2
@@ -69,6 +79,11 @@ function directorAvent(){
         ConquistadoresDirector[i].style.display = "none"
     }
 
+    const menuRecursos = document.getElementsByName('menu-recursos')
+    for(let i = 0; i < menuRecursos.length; i++){
+        menuRecursos[i].style.display = "none"
+    }
+
     activacion = 3
 }
 
@@ -93,7 +108,41 @@ function directorConqui(){
         ConquistadoresDirector[i].style.display = "flex"
     }
 
+    const menuRecursos = document.getElementsByName('menu-recursos')
+    for(let i = 0; i < menuRecursos.length; i++){
+        menuRecursos[i].style.display = "none"
+    }
+
     activacion = 4
+}
+
+function menuRecursos(){
+    const AventurerosBasica = document.getElementsByName('ADV-Basico')
+    for(let i = 0; i < AventurerosBasica.length; i++){
+        AventurerosBasica[i].style.display = "none"
+    }
+
+    const ConquistadoresBasica = document.getElementsByName('PAT-Basico')
+    for(let i = 0; i < ConquistadoresBasica.length; i++){
+        ConquistadoresBasica[i].style.display = "none"
+    }
+
+    const AventurerosDirector = document.getElementsByName('ADV-Direct')
+    for(let i = 0; i < AventurerosDirector.length; i++){
+        AventurerosDirector[i].style.display = "none"
+    }
+
+    const ConquistadoresDirector = document.getElementsByName('PAT-Direct')
+    for(let i = 0; i < ConquistadoresDirector.length; i++){
+        ConquistadoresDirector[i].style.display = "none"
+    }
+
+    const menuRecursos = document.getElementsByName('menu-recursos')
+    for(let i = 0; i < menuRecursos.length; i++){
+        menuRecursos[i].style.display = "block"
+    }
+
+    activacion = 5
 }
 
 function desconectar(){

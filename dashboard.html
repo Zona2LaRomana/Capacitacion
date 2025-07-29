@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.2/dist/sweetalert2.min.css">
 
         <link rel="stylesheet" href="CSS/dashboard.css">
+        <link rel="stylesheet" href="CSS/recursos.css">
     </head>
     <body>
         <div class="container">
@@ -24,6 +25,12 @@
                     </li>
                     <!--En esta Sección se debe de cargar los Certificados y Accesos Autorizados-->
                     <li>
+                        <a href="#" onclick="menuRecursos()">
+                            <i class='bx bxs-wrench icon'></i>
+                            <label for="" class="nav-item">Recursos</label>
+                        </a>
+                    </li>
+                    <li>
                         <a href="#" class="logout" onclick="desconectar()">
                             <i class='bx bx-log-out'></i>
                             <span class="nav-item">Desconectar</span>
@@ -36,6 +43,101 @@
                 <div class="main-top">
                     <h1 id="user">Certificaciones</h1>
                 </div>
+                <!--Seccion de los Recursos-->
+                <input type="radio" class="rbRecursos" name="Recursos" id="rbTodo" checked>
+                <input type="radio" class="rbRecursos" name="Recursos" id="rbMultimedia">
+                <input type="radio" class="rbRecursos" name="Recursos" id="rbManuales">
+                <input type="radio" class="rbRecursos" name="Recursos" id="rbCartas">
+                <input type="radio" class="rbRecursos" name="Recursos" id="rbConquistadores">
+                <input type="radio" class="rbRecursos" name="Recursos" id="rbAventureros">
+
+                <div class="recursos" style="display: none;" name="menu-recursos">
+                    <h2>RECURSOS DISPONIBLES</h2>
+                    <div class="top-recursos">
+                        <h3>Recursos</h3>
+                        <label for="rbTodo">Todos</label>
+                        <label for="rbMultimedia">Multimedia</label>
+                        <label for="rbManuales">Manuales</label>
+                        <label for="rbCartas">Cartas</label>
+                        <label for="rbAventureros">Aventureros</label>
+                        <label for="rbConquistadores">Conquistadores</label>                        
+                    </div>
+                    <div class="galeria-recursos">
+                        <a href="https://drive.google.com/file/d/1lzANwylWFK_gKxsFLaYn_AkvLh5JYvVt/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Multimedia">
+                            <img src="IMG/Recursos/HimnoNacional.JPG" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/10_os_tGt9fubqcbsIBj1ZBuNszB4EcMv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Multimedia">
+                            <img src="IMG/Recursos/HimnoAventureros.JPG" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1lo0jDdjrIry__Lto7lwuFFBeomvQa31-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Multimedia">
+                            <img src="IMG/Recursos/HimnoConquistadores.JPG" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1yCHOFhhbJoE7cIXkfGBsTnNYsJ8JbbcC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Multimedia">
+                            <img src="IMG/Recursos/HimnoGuiasMayores.JPG" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/15guQlmBzcBY7xFb-gcoR2Y_EIFIJyVlR/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Multimedia">
+                            <img src="IMG/Recursos/ideales.JPG" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1SXvEtcgCj5Z2YZSmmbAg3jvITYG3tf9q/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Manuales">
+                            <img src="IMG/ManualAventureros.png" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1gBA1PGsrgn1sMRNlTUPfqeAs7xI7_1Of/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Manuales">
+                            <img src="IMG/ManualDeEspecialidades.png" alt="">
+                            <p>Manual de Especialidades</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/102DqZ_yv_Ie6PlXs6HyKLo42uCNaOBdS/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Manuales">
+                            <img src="IMG/ReglamentosUniformes.png" alt="">
+                            <p>Reglamentos de Uniformidad</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/110DVMvA-05OiQ1mtN8ND7wdKVFKFhUNw/view" target="_blank" rel="noopener noreferrer" class="pic Cartas">
+                            <img src="IMG/LogoIglesia.JPG" alt="">
+                            <p>Modelos de Cartas</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1-CxN_t0hdYa5i1jx6gt7nQWmXT2DvpRi/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Aventureros">
+                            <img src="IMG/Recursos/corderitos.png" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/18FOHc32JZWegUA3FN1bQZmh8oocYswIn/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Aventureros">
+                            <img src="IMG/Recursos/AvesMadrugadoras.png" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1nzn6UeEMh6KNXFB7cvCcUW9F4ndAvduk/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Aventureros">
+                            <img src="IMG/Recursos/AbejasIndustriosas.png" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1dRR1flSU6HeTno3aXBwFPUrpRnTep2Hc/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Aventureros">
+                            <img src="IMG/Recursos/RayitosDeSol.png" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1XzyA-1oiPtK2OYI6RBpV7EdfbZaug9a5/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Aventureros">
+                            <img src="IMG/Recursos/Constructor.png" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1janoTDqekiWT9bk5bgNoLy_XIsMm4eN3/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Aventureros">
+                            <img src="IMG/Recursos/ManosAyudadoras.jpg" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1xpCu7pduXE2SjDE7faJ_o95nH-Z9Jx_W/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Conquistadores">
+                            <img src="IMG/Recursos/amigo-art.png" alt="">
+                            <p>Amigo de la Senda</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1KQwo3-YaHWQB8jqKJLNsMKx6aQpRanUK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Conquistadores">
+                            <img src="IMG/Recursos/companero-art.png" alt="">
+                            <p>Compañero de Caminata</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1lXsIOZEhRYmAAd9RbnBXihozumz5R0CZ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Conquistadores">
+                            <img src="IMG/Recursos/explorador-art.png" alt="">
+                            <p>Explorador de la Selva</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1CNIw2q-5Zar5WNCFLx1XFzVotd9CbaV_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Conquistadores">
+                            <img src="IMG/Recursos/orientador-art.png" alt="">
+                            <p>Orientador</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Bca0K0rPM3xd0RWfPNa9qO4mvBg-yIic/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Conquistadores">
+                            <img src="IMG/Recursos/viajero-art.png" alt="">
+                            <p>Viajero</p>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1ut-B5xLS7SvLmGM3FY6wE_nUdMYOqMa1/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Conquistadores">
+                            <img src="IMG/Recursos/guia-art.png" alt="">
+                            <p>Guía</p>
+                        </a>
+                    </div>
+                </div>
+                <!--Seccion de los Recursos-->
                 <!--<div class="taller" id="ADV001">
                     <div class="content-taller">
                         <h3>Titulo Taller</h3>

@@ -171,6 +171,7 @@ a:hover i{
     z-index: 100;
 }
 .content-taller{
+    box-sizing: border-box;
     max-width: 700px;
     width: 100%;
     padding: 20px;
