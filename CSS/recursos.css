@@ -7,34 +7,6 @@
     width: 100%;
     text-align: center;    
 }
-section h2{
-    font-weight: normal;
-    font-size: 35px;
-    position: relative;
-    margin: 20px 0;
-}
-section h2::before{
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 3px;
-    background-color: #F28705;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: animate 4s linear infinite;
-}
-@keyframes animate{
-    0%{
-        width: 100px;
-    }
-    50%{
-        width: 200px;
-    }
-    100%{
-        width: 100px;
-    }
-}
 .top-recursos{
     background-color: #03A6A6;
     width: 90%;
@@ -66,17 +38,24 @@ section h2::before{
 .top-recursos label:hover{
     color: #F28705;
 }
+.top-recursos label i{
+    font-size: 20px;
+}
+.top-recursos label img{
+    width: 20px;
+    height: 20px;
+}
 .galeria-recursos{
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
 }
 .pic{
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px #F28705;
     cursor: pointer;
@@ -86,12 +65,13 @@ section h2::before{
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: #F28705;
+    color: #000;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: auto;
     font-weight: bold;
+    text-align: center;
 }
 .pic img{
     width: 100%;
@@ -219,18 +199,66 @@ section h2::before{
 
 @media (max-width:1000px) {
     .galeria-recursos{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 @media (max-width:960px) {
     .galeria-recursos{
         grid-gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-    .top-recursos label{
-        margin: 10px;
+    .top-recursos label i,
+    .top-recursos label img{
+        margin: 0 10px;
     }
     .top-recursos h3{
         padding: 10px;
+    }
+}
+@media (max-width:760px){
+    .top-recursos label{
+        margin: 0 15px;
+    }
+    .galeria-recursos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .top-recursos label i,
+    .top-recursos label img{
+        margin: 0 5px;
+    }
+    .top-recursos label span{
+        display: none;
+    }
+}@media (max-width:660px){
+    .top-recursos h3{
+        display: none;
+    }
+}
+@media (max-width:623px) {
+    .top-recursos label i,
+    .top-recursos label img{
+        margin: 0 5px;
+        padding: 0;
+    }
+}
+@media (max-width:500px){
+    .top-recursos{
+        width: 80%;
+    }
+    .top-recursos label{
+        margin: 0 10px;
+    }
+}
+@media (max-width:450px){
+    .top-recursos{
+        width: 70%;
+    }
+    .top-recursos label{
+        margin: 0 5px;
+    }
+}
+@media (max-width:400px){
+    .top-recursos label{
+        margin: 0 2px;
     }
 }

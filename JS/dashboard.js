@@ -26,6 +26,11 @@ function basicaAvent(){
         menuRecursos[i].style.display = "none"
     }
 
+    const MenuEvaluacion = document.getElementsByName('table')
+    for(let i = 0; i < MenuEvaluacion.length; i++){
+        MenuEvaluacion[i].style.display = "none"
+    }
+
     activacion = 1
 }
 
@@ -53,6 +58,11 @@ function basicaConqui(){
     const menuRecursos = document.getElementsByName('menu-recursos')
     for(let i = 0; i < menuRecursos.length; i++){
         menuRecursos[i].style.display = "none"
+    }
+
+    const MenuEvaluacion = document.getElementsByName('table')
+    for(let i = 0; i < MenuEvaluacion.length; i++){
+        MenuEvaluacion[i].style.display = "none"
     }
 
     activacion = 2
@@ -84,6 +94,11 @@ function directorAvent(){
         menuRecursos[i].style.display = "none"
     }
 
+    const MenuEvaluacion = document.getElementsByName('table')
+    for(let i = 0; i < MenuEvaluacion.length; i++){
+        MenuEvaluacion[i].style.display = "none"
+    }
+
     activacion = 3
 }
 
@@ -111,6 +126,11 @@ function directorConqui(){
     const menuRecursos = document.getElementsByName('menu-recursos')
     for(let i = 0; i < menuRecursos.length; i++){
         menuRecursos[i].style.display = "none"
+    }
+
+    const MenuEvaluacion = document.getElementsByName('table')
+    for(let i = 0; i < MenuEvaluacion.length; i++){
+        MenuEvaluacion[i].style.display = "none"
     }
 
     activacion = 4
@@ -142,7 +162,57 @@ function menuRecursos(){
         menuRecursos[i].style.display = "block"
     }
 
+    const MenuEvaluacion = document.getElementsByName('table')
+    for(let i = 0; i < MenuEvaluacion.length; i++){
+        MenuEvaluacion[i].style.display = "none"
+    }
+
     activacion = 5
+}
+
+function Evaluacion(){
+    const AventurerosBasica = document.getElementsByName('ADV-Basico')
+    for(let i = 0; i < AventurerosBasica.length; i++){
+        AventurerosBasica[i].style.display = "none"
+    }
+
+    const ConquistadoresBasica = document.getElementsByName('PAT-Basico')
+    for(let i = 0; i < ConquistadoresBasica.length; i++){
+        ConquistadoresBasica[i].style.display = "none"
+    }
+
+    const AventurerosDirector = document.getElementsByName('ADV-Direct')
+    for(let i = 0; i < AventurerosDirector.length; i++){
+        AventurerosDirector[i].style.display = "none"
+    }
+
+    const ConquistadoresDirector = document.getElementsByName('PAT-Direct')
+    for(let i = 0; i < ConquistadoresDirector.length; i++){
+        ConquistadoresDirector[i].style.display = "none"
+    }
+
+    const menuRecursos = document.getElementsByName('menu-recursos')
+    for(let i = 0; i < menuRecursos.length; i++){
+        menuRecursos[i].style.display = "none"
+    }
+
+    const MenuEvaluacion = document.getElementsByName('table')
+    for(let i = 0; i < MenuEvaluacion.length; i++){
+        MenuEvaluacion[i].style.display = "block"
+    }
+
+    activacion = 6
+}
+
+
+function verTarea(identidad){
+    const modal = document.getElementById(identidad)
+    modal.style.display = "flex"
+}
+
+function cerrarTarea(identidad){
+    const modal = document.getElementById(identidad)
+    modal.style.display = "none"
 }
 
 function desconectar(){

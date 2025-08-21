@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="CSS/dashboard.css">
         <link rel="stylesheet" href="CSS/recursos.css">
+        <link rel="stylesheet" href="CSS/tablaAsignaciones.css">
     </head>
     <body>
         <div class="container">
@@ -43,8 +44,8 @@
                 <div class="main-top">
                     <h1 id="user">Certificaciones</h1>
                 </div>
-                <!--Seccion de los Recursos-->
-                <input type="radio" class="rbRecursos" name="Recursos" id="rbTodo" checked>
+                <!--Seccion de los Recursos
+                <input type="radio" class="rbRecursos" name="Recursos" id="rbTodo" checked>-->
                 <input type="radio" class="rbRecursos" name="Recursos" id="rbMultimedia">
                 <input type="radio" class="rbRecursos" name="Recursos" id="rbManuales">
                 <input type="radio" class="rbRecursos" name="Recursos" id="rbCartas">
@@ -52,15 +53,14 @@
                 <input type="radio" class="rbRecursos" name="Recursos" id="rbAventureros">
 
                 <div class="recursos" style="display: none;" name="menu-recursos">
-                    <h2>RECURSOS DISPONIBLES</h2>
                     <div class="top-recursos">
                         <h3>Recursos</h3>
-                        <label for="rbTodo">Todos</label>
-                        <label for="rbMultimedia">Multimedia</label>
-                        <label for="rbManuales">Manuales</label>
-                        <label for="rbCartas">Cartas</label>
-                        <label for="rbAventureros">Aventureros</label>
-                        <label for="rbConquistadores">Conquistadores</label>                        
+                        <!--<label for="rbTodo"><i class='bx bxs-package'></i><span>Todos</span></label>-->
+                        <label for="rbMultimedia"><i class='bx bxs-film'></i><span>Multimedia</span></label>
+                        <label for="rbManuales"><i class='bx bx-file'></i><span>Manuales</span></label>
+                        <label for="rbCartas"><i class='bx bx-envelope'></i><span>Cartas</span></label>
+                        <label for="rbAventureros"><img src="IMG/Icons/aventureroslogo.png"><span>Aventureros</span></label>
+                        <label for="rbConquistadores"><img src="IMG/Icons/Emblema_del_Club_de_Conquistadores.svg.png"><span>Conquistadores</span></label>                        
                     </div>
                     <div class="galeria-recursos">
                         <a href="https://drive.google.com/file/d/1lzANwylWFK_gKxsFLaYn_AkvLh5JYvVt/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Multimedia">
@@ -138,25 +138,42 @@
                     </div>
                 </div>
                 <!--Seccion de los Recursos-->
-                <!--<div class="taller" id="ADV001">
-                    <div class="content-taller">
-                        <h3>Titulo Taller</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione optio dignissimos? Modi itaque ex maxime id velit laudantium aperiam!</p>
-                        <div class="asignaciones">
-                            <div class="asignacion">
-                                <h4>Realiza el Examen</h4>
-                                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Examen de la Asignación</a>
-                            </div>
-                            <div class="asignacion">
-                                <h4>Realiza la Tarea</h4>
-                                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Decarga la Tarea</a>
-                                <input type="file" id="f-ADV001" accept="application/pdf">
-                                <button onclick="subirArchivo('f-ADV001')">Entregar</button>
-                            </div>
+                <!--Sección para Las Evaluaciones-->
+                <div class="table" name="table">
+                    <div class="table_header">
+                        <p>Registro de Tareas</p>
+                        <div>
+                            <input class="txtBuscar" type="text" placeholder="Buscar Participante">
                         </div>
-                        <button onclick="desactivarSeminario('ADV001')">Cerrar</button>
+                    </div>
+                    <div class="table_section">
+                        <table id="tTareas">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Certificación</th>
+                                    <th>Candidato</th>
+                                    <th>Examen</th>
+                                    <th>Tarea</th>
+                                    <th></th>
+                                </tr>                                
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--
+                    <div class="paginacion">
+                        <div><i class='bx bx-chevrons-left'></i></div>
+                        <div><i class='bx bx-chevron-left' ></i></div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div><i class='bx bx-chevron-right' ></i></div>
+                        <div><i class='bx bx-chevrons-right' ></i></div>
                     </div>
                 </div>-->
+                <!--Sección para Las Evaluaciones-->
             </section>
         </div>        
     </body>
@@ -165,4 +182,6 @@
     <script src="JS/dashboard.js"></script>
     <script src="JS/navBar.js"></script>
     <script src="JS/entregarTarea.js"></script>
+    <script src="JS/tablaTareas.js"></script>
+    <script src="JS/registrarEvaluacion.js"></script>
 </html>

@@ -1,0 +1,178 @@
+.table{
+    display: none;
+    width: 100%;
+    max-height: 400px;
+}
+.table .txtBuscar{
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1px solid #0298cf;
+    border-radius: 6px;
+    color: #0298cf;
+    outline: none;
+}
+.table_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.table_header p{
+    color: #000;
+}
+.table_section{
+    height: 400px;
+    overflow: auto;
+}
+.table_section table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.table_section thead th{
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #8493a5;
+    font-size: 15px;
+    z-index: 100;
+}
+.table_section th,
+.table_section td{
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 5px;
+    word-break: break-word;
+    text-align: left;
+    font-size: 12px;
+}
+.table_section td:last-child{
+    text-align: center;
+}
+.table_section tr:hover td{
+    color: #0298cf;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+.table_section table td .input-acciones{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.table_section td .input-acciones .inputTD{
+    position: relative;
+    flex: 1;
+    min-width: 50px;
+    width: 25%;
+    padding: 6px 8px;
+    margin: 0 5px;
+    border: 1px solid #0298cf;
+    border-radius: 6px;
+    color: #0298cf;
+    text-align: center;
+    outline: none;
+}
+.table_section table button{
+    background-color: #0298cf;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 8px 12px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all .3s ease, transform .2s ease;
+    white-space: nowrap;
+}
+.table_section table td .btnRegistrar{
+    background-color: #28a745;
+}
+.table_section table td button:hover,
+.table_section table td .btnRegistrar:hover{
+    background-color: #5488a3;
+    transform: scale(1.05);
+}
+.table_section table td:nth-child(1),
+.table_section table th:nth-child(1){
+    display: none;
+}
+
+/*Ventana Modal*/
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.content-modal{
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    max-height: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.content-modal h2{
+    margin-bottom: 15px;
+}
+
+.content-modal .btn-cerrar{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px 10px;
+    background-color: #0298cf;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+::-webkit-scrollbar{
+    height: 5px;
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::placeholder{
+    color: #0298cf;
+}
+@media (max-width: 890px){
+    .table_section thead th,
+    .table_section td .input-acciones .inputTD{
+        font-size: 12px;
+    }
+    .table_section table td button{
+        font-size: 11px;
+        padding: 6px 8px;
+        gap: 4px;
+    }
+    .table_section .table td{
+        font-size: 11px;
+    }
+}
+@media (max-width: 868px){
+    .table td button span{
+        display: none;
+    }
+}
+@media (max-width: 625px){
+    .table_section table td:nth-child(2),
+    .table_section table th:nth-child(2){
+        display: none;
+    }
+}

@@ -1,9 +1,9 @@
 const clouName = 'dv0gvojyg'
 const uploadPreset = 'public_upload'
 
-async function subirArchivo(fileInput, codigoUsuario){
+async function subirArchivo(fileInput, codigoUsuario, result){
     const archivo = document.getElementById(fileInput).files[0]
-    //const resultado = document.getElementById(result)
+    const resultado = document.getElementById(result)
 
     if(!archivo){
         Swal.fire({
@@ -28,7 +28,7 @@ async function subirArchivo(fileInput, codigoUsuario){
     formData.append('upload_preset', uploadPreset)
     formData.append('public_id', nombrePublico)
 
-    //resultado.textContent = "⏳ Subiendo tarea..."
+    resultado.textContent = "⏳ Subiendo tarea..."
 
     try{
         const response = await fetch(url, {
@@ -63,7 +63,7 @@ async function subirArchivo(fileInput, codigoUsuario){
 
 async function RegistrarTarea(usuario, codigo, fecha, link){
 
-    const URL_SCRIPT = "https://script.google.com/macros/s/AKfycby46vLCFgVIcp8-c2wWrGnCB-7HIwr-iebmP5-UO3zFzjUNMlBEPMUZXITU7rfHRsfD/exec"
+    const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbzj9c2V27ViFSMBczSVOqFoGkbMnScIXTceUexVFMpw38wf1Ew9sT6UZH9xMPW78yxWog/exec"
 
     const data = new URLSearchParams()
 
@@ -71,6 +71,11 @@ async function RegistrarTarea(usuario, codigo, fecha, link){
     data.append("codigo", codigo)
     data.append("fecha", fecha)
     data.append("linkTarea", link)
+    data.append("examen", 0)
+    data.append("tarea", 0)
+    data.append("evaluador", "N/A")
+    data.append("fechaEvaluacion", Date.now().toString())
+    data.append("referencia", usuario + "_" + codigo)
 
     try{
         const response = await fetch(URL_SCRIPT, {
@@ -81,8 +86,11 @@ async function RegistrarTarea(usuario, codigo, fecha, link){
         const result = await response.text()
 
         console.log("Registro exitoso ✔️")
+        resultado.textContent = "Tarea Entregada con exito ✔️"
+        window.location.reload()
     }catch(error){
         console.log("Error al registrar ❌")
+        resultado.textContent = "Error en el Envio ❌. Intente más tarde"
         console.error(error)
     }
 }
