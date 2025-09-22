@@ -30,6 +30,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             //window.location.href = "dashboard.html?" + query
             sessionStorage.setItem("Codigo", user.Codigo)
             sessionStorage.setItem("Nombre", user.Nombre)
+            sessionStorage.setItem("Oficial", user.Coordinador)
             window.location.href = "dashboard.html"
         }else{
             document.getElementById("mensaje").textContent = "Contraseña Incorrecta"
