@@ -39,7 +39,7 @@ header .navbar{
     top: 70px;          
     right: 0px;        
     width: 1050px;       
-    z-index: 100;       
+    z-index: 100px;    
 }
 .fondo-debajo{
     background-color: rgba(0, 0, 0, 0.6);
