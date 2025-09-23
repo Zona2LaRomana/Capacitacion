@@ -11,10 +11,21 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("../IMG/LogoZonal.jpg") no-repeat;
+    background: url("../IMG/Fondo-Inicio.jpg") no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     backdrop-filter: blur(7px);
+}
+.icon-center{
+    position: absolute;
+    top: 10px;
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+
+    
 }
 .login-box{
     display: flex;
@@ -29,7 +40,7 @@ body{
     margin: 20px 0 40px 0;
 }
 .login-header header{
-    color: #fff;
+    color: #03A6A6;
     font-size: 30px;
     font-weight: 600;
 }

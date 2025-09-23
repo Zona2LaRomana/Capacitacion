@@ -8,17 +8,23 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+    margin: 0;
+    padding: 0;
     height: 100vh;
-    background: url("../IMG/CapacitaciónLogoRomana.png");
+    background: url("../IMG/Fondo-Inicio.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
 header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px;
+    
 }
 header .navbar{
     display: flex;
@@ -27,7 +33,29 @@ header .navbar{
     margin: 0 auto;
     justify-content: space-between;
 }
+/*Estilo del Logo de capacitaciones ADE*/
+.logo-right {
+    position: absolute; 
+    top: 70px;          
+    right: 0px;        
+    width: 1050px;       
+    z-index: 100;       
+}
+.fondo-debajo{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-top: -10px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}   
+
+
+
 .navbar .logo{
+    /*position: absolute; 
+    top: 15px;*/
     font-size: 2.1rem;
     font-weight: 600;
 }
@@ -35,6 +63,9 @@ header .navbar{
     color: #F28705;
 }
 .navbar .menu-links{
+    /*position: absolute; 
+    top: 30px;          
+    right: 150px; */
     display: flex;
     gap: 40px;
 }
@@ -56,6 +87,9 @@ header .navbar{
     padding: 0 20px;
 }
 .hero-section .content{
+    position: absolute; 
+    top: 290px;
+    right: 100px;
     color: #037F8C;
     max-width: 1200px;
     width: 100%;
@@ -100,7 +134,7 @@ header .navbar{
 }
 @media screen and (max-width: 900px){
     body{
-        background: url("../IMG/LogoZonal.jpg");
+        background: url("../IMG/Fondo-Inicio.jpg");
         background-repeat: no-repeat;
         background-size: contain;
     }
@@ -118,22 +152,29 @@ header .navbar{
     }
     .navbar .menu-links{
         position: fixed;
-        left: -260px;
+        /*left: -260px;*/
+        right: -260px;
         top: 0;
         flex-direction: column;
         width: 260px;
         height: 100vh;
         background: #f2f2f2;
         padding: 70px 40px 0;
-        transition: left 0.5s ease;
+        transition: right 0.5s ease;
     }
     header.show-mobile-menu .navbar .menu-links{
-        left: 0;
+        /*left: 0;*/
+        right: 0;
+        
     }
     .navbar a{
-        color: #000;
+        color: #037F8C;
     }
     .hero-section .content{
         display: none;
     }
+
+    
+
+
 }
