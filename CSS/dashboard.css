@@ -64,7 +64,7 @@ nav ul li a .icon{
     object-fit: contain;
 }
 .nav-item{
-    font-size: 9px;
+    font-size: 14px;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -216,3 +216,4 @@ nav ul li a:hover .nav-item{
     border-right: solid 1px #666;
 
 }
+
