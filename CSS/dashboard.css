@@ -64,7 +64,7 @@ nav ul li a .icon{
     object-fit: contain;
 }
 .nav-item{
-    font-size: 14px;
+    font-size: 9px;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -214,4 +214,5 @@ nav ul li a:hover .nav-item{
 }
 .asignaciones .asignacion:nth-child(1){
     border-right: solid 1px #666;
+
 }
