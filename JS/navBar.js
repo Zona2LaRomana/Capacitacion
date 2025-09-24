@@ -72,14 +72,14 @@ if(Nombre){
                                                                      <table>
                                                                          <tr>
                                                                              <td><span>${examen1} %</span></td>
-                                                                             <td><span>${tarea1} %</span></td>
+                                                                             <!--<td><span>${tarea1} %</span></td>-->
                                                                          </tr>
                                                                          <tr>
                                                                              <td>Examen</td>
-                                                                             <td>Tarea</td>
+                                                                             <!--<td>Tarea</td>-->
                                                                          </tr>
                                                                      </table>
-                                                                     <p>Evaluador: ${evaluador}</p>
+                                                                     <!--<p>Evaluador: ${evaluador}</p>-->
                                                                  </div>
                                                                  <button onclick="activarSeminario('${fila.codigoSeminario}', 'v-${fila.codigoSeminario}')">Ver Seminario</button>
                                                              </div>
@@ -95,7 +95,7 @@ if(Nombre){
                                                                                 Examen de la Asignación
                                                                             </a>
                                                                      </div>
-                                                                     <div class="asignacion">
+                                                                     <!--<div class="asignacion">
                                                                         <h5>Realiza la Tarea</h5>
                                                                         <a href="${fila.linkTarea}" target="_blank" rel="noopener noreferrer">
                                                                             Decarga la Tarea
@@ -105,7 +105,7 @@ if(Nombre){
                                                                         <button onclick="subirArchivo('${fila.tareaArchivo}', '${Codigo}', '${fila.respuestaArchivo}')">
                                                                             Entregar Tarea
                                                                         </button>
-                                                                     </div>
+                                                                     </div>-->
                                                                  </div>
                                                                  <button onclick="desactivarSeminario('${fila.codigoSeminario}')">Cerrar</button>
                                                              </div>
