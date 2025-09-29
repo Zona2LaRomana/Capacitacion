@@ -158,7 +158,7 @@ header .navbar{
         flex-direction: column;
         width: 260px;
         height: 100vh;
-        background: #f2f2f2;
+        background: #fff;
         padding: 70px 40px 0;
         transition: right 0.5s ease;
     }

@@ -25,11 +25,13 @@
 .table_section{
     height: 400px;
     overflow: auto;
+    background-color: #f0f0f0;
 }
 .table_section table{
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    background-color: #f0f0f0;
 }
 .table_section thead th{
     position: sticky;

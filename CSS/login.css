@@ -15,6 +15,9 @@ body{
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(7px);
+
+
+
 }
 .login-box{
     display: flex;
