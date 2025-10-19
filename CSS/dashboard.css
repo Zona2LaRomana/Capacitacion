@@ -109,8 +109,9 @@ nav ul li a:hover .nav-item{
 }
 .card{
     max-width: 300px;
+    min-width: 300px;
     width: 100%;
-    min-height: 300px;
+    min-height: 346px;
     height: 100%;
     background-color: #f7b009;
     border-radius: 8px;
