@@ -41,7 +41,7 @@ if(Nombre){
                         if(dataSeminario.length === 0){
                             //taller.innerHTML = "<div>No hay datos disponibles</div>"
                         }else{
-                            let evaluador, examen1, tarea1, display = "block"        
+                            let evaluador, examen1, tarea1, display = "block"    
                             dataSeminario.forEach(fila => {                            
                             //Buscar los Resultados del modulo del estudiante
                                 const urlTareas = "https://opensheet.elk.sh/1NlhcKqmAIVO1nAoYasLk8OoRLe7DUvvJ0V77Wlj4frc/Tareas"
@@ -158,15 +158,12 @@ if(Nombre){
                         if(dataSeminario.length === 0){
                             //taller.innerHTML = "<div>No hay datos disponibles</div>"
                         }else{
-                            let evaluador, examen1, tarea1, display = "block"        
+                            let evaluador, examen1, tarea1, display = "block"
+                            let verExamen = ""     
                             dataSeminario.forEach(fila => {
                                 const fec1 = new Date(fila.publicar)
                                 const fec2 = new Date(fechaActual)
-                                let estado = ""
-                                if(fila.Finalizar == "1"){
-                                    estado = "hidden"
-                                    console.log(estado)
-                                }
+                                
                                 if(fec1.getTime() <= fec2.getTime()){
                                     //Buscar los Resultados del modulo del estudiante
                                 const urlTareas = "https://opensheet.elk.sh/1NlhcKqmAIVO1nAoYasLk8OoRLe7DUvvJ0V77Wlj4frc/Tareas"
@@ -184,6 +181,12 @@ if(Nombre){
                                         tarea1 = dataCalificacion.Tarea
                                         evaluador = dataCalificacion.Evaluador
                                         display = "none"
+                                    }
+
+                                    if(fila.Finalizar == "hidden"){
+                                        verExamen = "none"
+                                    }else{
+                                        verExamen = "block"
                                     }
                                     
                                     const div = document.createElement("div")
@@ -211,10 +214,10 @@ if(Nombre){
                                                              <div class="taller" id="${fila.codigoSeminario}">
                                                                  <div class="content-taller">
                                                                      <h3>${fila.tituloSeminario}</h3>
-                                                                     <iframe style="visibility:${estado}" id="v-${fila.codigoSeminario}" width="100%" height="300" src="${fila.frameYoutube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                                     <iframe style="visibility:${fila.Finalizar}" id="v-${fila.codigoSeminario}" width="100%" height="300" src="${fila.frameYoutube}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                                                      <p>${fila.descripcionYoutube}</p>
                                                                      <div class="asignaciones">
-                                                                         <div class="asignacion">
+                                                                         <div class="asignacion" style="display:${verExamen}">
                                                                             <h5>Realiza el Examen</h5>
                                                                             <a href="${fila.linkExamen}" target="_blank" rel="noopener noreferrer">
                                                                                 Examen de la Asignación
