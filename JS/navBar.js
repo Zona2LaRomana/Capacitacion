@@ -230,7 +230,7 @@ if(Nombre){
                                                                         </a>
                                                                         <input type="file" id="${fila.tareaArchivo}" style="display: ${display}" accept="application/pdf">
                                                                         <p id="${fila.respuestaArchivo}"></p>
-                                                                        <button onclick="subirArchivo('${fila.tareaArchivo}', '${Codigo}', '${fila.respuestaArchivo}')">
+                                                                        <button onclick="subirArchivo('${fila.tareaArchivo}', '${Codigo}', '${fila.respuestaArchivo}')" style="display: ${display}">
                                                                             Entregar Tarea
                                                                         </button>
                                                                      </div>
