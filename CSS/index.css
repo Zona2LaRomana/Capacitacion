@@ -1,13 +1,18 @@
 /*Importar Fuentes de Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -18,76 +23,202 @@ body{
 }
 
 
-header{
+header {
+    background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px;
-    
+
 }
-header .navbar{
+
+header .navbar {
     display: flex;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
 }
+
+.logo-Capacitaciones {
+    margin-left: -80px;
+    position: absolute;
+    display: flex;
+    width: 90px;
+
+}
+
+/*seciones de la pagina*/
+
+.certificaiones-actuales {
+    padding: 4rem 6%;
+    width: 100%;
+    height: 60vh;
+    background-color: #F7941D;
+}
+
+.certificaiones-actuales h2 {
+    color: white;
+    font-size: 37px;
+    display: flex;
+    margin-top: -47px;
+    margin-bottom: 17px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.cards {
+    background: #ffffff;
+    flex: 1;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+
+}
+
+
+
+.cards img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+
+    background: #f3f3f3;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1rem;
+}
+
+/*seccion de encargados*/
+
+.cards-container-en {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.Encargados {
+    padding: 4rem 6%;
+    width: 100%;
+    height: 110vh;
+    background-color: whitesmoke;
+}
+
+.Encargados h2 {
+    color: grey;
+    font-size: 37px;
+    display: flex;
+    margin-top: -47px;
+    margin-bottom: 17px;
+}
+
+.cards-en {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-en img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background: #f5f5f5;
+
+}
+
+.cards-en .card-content {
+    margin-top: 1rem;
+}
+
+.cards-en h3 {
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+
 /*Estilo del Logo de capacitaciones ADE*/
 .logo-right {
-    position: absolute; 
-    top: 70px;          
-    right: 0px;        
-    width: 1050px;       
-    z-index: 100px;    
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    width: 1050px;
+    z-index: 100px;
 }
-.fondo-debajo{
+
+.fondo-debajo {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 30px 30px;
     border-radius: 12px;
     max-width: 600px;
     margin-top: -10px;
     color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}   
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
 
+.text-ADE {
+    color: #037F8C;
+    margin-left: 40px;
+}
 
-
-.navbar .logo{
+.navbar .logo {
     /*position: absolute; 
     top: 15px;*/
     font-size: 2.1rem;
     font-weight: 600;
 }
-.navbar .logo span{
+
+.navbar .logo span {
     color: #F28705;
 }
-.navbar .menu-links{
+
+.navbar .menu-links {
     /*position: absolute; 
     top: 30px;          
     right: 150px; */
     display: flex;
     gap: 40px;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
 }
-.navbar a{
+
+.navbar a {
     color: #037F8C;
     text-decoration: none;
     transition: 0.2s ease;
 }
-.navbar a:hover{
-    color:#F28705;
+
+.navbar a:hover {
+    color: #F28705;
 }
-.hero-section{
+
+.hero-section {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
-.hero-section .content{
-    position: absolute; 
+
+.hero-section .content {
+    position: absolute;
     top: 290px;
     right: 100px;
     color: #037F8C;
@@ -95,16 +226,19 @@ header .navbar{
     width: 100%;
     margin: 0 auto;
 }
-.hero-section .content h1{
+
+.hero-section .content h1 {
     font-size: 3rem;
     max-width: 600px;
 }
-.hero-section .content p{
+
+.hero-section .content p {
     font-weight: 300;
     margin-top: 15px;
     max-width: 600px;
 }
-.hero-section .content button{
+
+.hero-section .content button {
     background: #f2f2f2;
     outline: none;
     border: none;
@@ -116,29 +250,35 @@ header .navbar{
     cursor: pointer;
     transition: 0.2s ease;
 }
-.hero-section .content button:hover{
+
+.hero-section .content button:hover {
     color: #fff;
     background: #F28705;
 }
-#menu-btn{
+
+#menu-btn {
     color: #000;
     cursor: pointer;
     display: none;
 }
-#close-menu-btn{
+
+#close-menu-btn {
     display: none;
     position: absolute;
     right: 20px;
     top: 20px;
     cursor: pointer;
 }
-@media screen and (max-width: 900px){
-    body{
+
+@media screen and (max-width: 900px) {
+    body {
         background: url("../IMG/Fondo-Inicio.jpg");
         background-repeat: no-repeat;
         background-size: contain;
+        
     }
-    header.show-mobile-menu::before{
+
+    header.show-mobile-menu::before {
         content: "";
         position: fixed;
         left: 0;
@@ -147,10 +287,47 @@ header .navbar{
         height: 100%;
         backdrop-filter: blur(5px);
     }
-    #close-menu-btn, #menu-btn{
+
+       .cards-container {
+        flex-direction: column;
+    }
+
+    .certificaiones-actuales {
+        height: auto;
+    }
+
+    .text-ADE {
+        font-size: 25px;
+        margin-left: 100px;
+    }
+
+    .logo-Capacitaciones {
+        margin-left: -5px;
+        width: 80px;
+    }
+    .cards-container-en {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Encargados {
+        height: auto;
+    }
+    .Encargados h2{
+        font-size: 27px;
+    }
+.Encargados h3{
+    margin-top: -17px;
+    font-size: 15px;
+}
+    .Encargados h4{
+        font-size: 12px;
+    }
+    #close-menu-btn,
+    #menu-btn {
         display: block;
     }
-    .navbar .menu-links{
+
+    .navbar .menu-links {
         position: fixed;
         /*left: -260px;*/
         right: -260px;
@@ -162,19 +339,22 @@ header .navbar{
         padding: 70px 40px 0;
         transition: right 0.5s ease;
     }
-    header.show-mobile-menu .navbar .menu-links{
+
+    header.show-mobile-menu .navbar .menu-links {
         /*left: 0;*/
         right: 0;
-        
+
     }
-    .navbar a{
+
+    .navbar a {
         color: #037F8C;
     }
-    .hero-section .content{
+
+    .hero-section .content {
         display: none;
     }
 
-    
+
 
 
 }

@@ -1,52 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="IMG/Icons/IconoCapacitacionesADE.png" type="image/x-icon">
-        <title>Capacitación ADE</title>
 
-        <!--Codificación Para fuentes a ser usadas-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/Icons/IconoCapacitacionesADE.png" type="image/x-icon">
+    <title>Capacitación ADE</title>
 
-        <!--Links a CSS-->
-        <link rel="stylesheet" href="CSS/index.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-    <body>
-        <img src="IMG/Logo-Inicio-Fondo.png" alt="Logo" class="logo-right">
+    <!--Codificación Para fuentes a ser usadas-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Links a CSS-->
+    <link rel="stylesheet" href="CSS/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <img src="IMG/Logo-Inicio-Fondo.png" alt="Logo" class="logo-right">
 
 
-        <header>
-            <nav class="navbar">
-                <a href="#" class="logo">Asociación Dominicana del Este</a>
-                <ul class="menu-links">
-                    <i id="close-menu-btn" class='bx bx-x'></i>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Certificados</a></li>
-                    <li><a href="#">Recursos</a></li>
-                    <li><a href="login.html" target="_blank">Aula virtual</a></li>
-                </ul>
-                <i id="menu-btn" class='bx bx-menu'></i>
-            </nav>
-            
-        </header>
+    <header>
+        <nav class="navbar">
+            <img src="IMG/Icons/IconoCapacitacionesADE.png" alt="Logo Capacitaciones ADE" class="logo-Capacitaciones">
+            <h1 class="text-ADE">Capacitaciones ADE</h1>
 
-        <section class="hero-section">
-            <div class="content">
-                <h1>Certificaciones 2025</h1>
-                <div class="fondo-debajo">
+            <ul class="menu-links">
+                <i id="close-menu-btn" class='bx bx-x'></i>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#certificaionesADE">Certificaciones</a></li>
+                <li><a href="#EncargadosADE">Encargados</a></li>
+                <li><a href="login.html" target="_blank">Aula virtual</a></li>
+            </ul>
+            <i id="menu-btn" class='bx bx-menu'></i>
+        </nav>
+
+    </header>
+
+    <section class="hero-section">
+        <div class="content">
+            <!--<h1>Certificaciones 2025</h1>
+            <div class="fondo-debajo">
                 <p>
-                   Las Certificaciones del Ministerio de Jóvenes Adventistas, forman líderes eficaces en los 
-                   clubes de <b>Aventureros</b>, <b>Conquistadores</b> y <b>Guías</b>. Fortaleciendo su 
-                   planificación, currículo y filosofía.
+                    Las Certificaciones del Ministerio de Jóvenes Adventistas, forman líderes eficaces en los
+                    clubes de <b>Aventureros</b>, <b>Conquistadores</b> y <b>Guías</b>. Fortaleciendo su
+                    planificación, currículo y filosofía.
                 </p>
                 <button type="button" onclick="window.location.href='login.html'">Acceder</button>
-            </div>
-        </section>
-    </body>
-    <script src="JS/index.js"></script>
+            </div>-->
+    </section>
+
+    <section class="certificaiones-actuales" id="certificaionesADE">
+        <h2>Certificaciones</h2>
+        <div class="cards-container">
+
+            <article class="cards">
+                <img src="IMG/Icons/Director-Aventureros.png">
+                <div class="card-content">
+                    <h3>Básica de Aventureros</h3>
+                </div>
+            </article>
+
+            <article class="cards">
+                <img src="IMG/Icons/Certificaciones Conquistadores.jpg">
+                <div class="card-content">
+                    <h3>Básica de Conquistadores</h3>
+                </div>
+            </article>
+
+            <article class="cards">
+                <img src="IMG/Icons/Diseño de portadas de las certificaciones.jpg">
+                <div class="card-content">
+                    <h3>Director de Aventureros</h3>
+                </div>
+            </article>
+
+            <article class="cards">
+                <img src="IMG/Icons/Director-Conquistadores.png">
+                <div class="card-content">
+                    <h3>Director de Conquistadores</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="Encargados" id="EncargadosADE">
+        <h2>Equipo de Capacitación y Especialidades ADE</h2>
+        <div class="cards-container-en">
+
+            <article class="cards-en">
+                <img src="IMG/Encargados/Ronny G.jpg">
+                <div class="card-content">
+                    <h3>ADE</h3>
+                    <h4>GM. Ronny Guerrero</h4>
+                </div>
+            </article>
+
+            <article class="cards-en">
+                <img src="IMG/Encargados/Rafael R.jpg">
+                <div class="card-content">
+                    <h3>Zona 1 </h3>
+                    <h4>GM. Rafael Rosario</h4>
+                </div>
+            </article>
+
+            <article class="cards-en">
+                <img src="IMG/Encargados/Kelvin Q.jpg">
+                <div class="card-content">
+                    <h3>Zona 2</h3>
+                    <h4>GM. Kelvin Quiñones</h4>
+                </div>
+            </article>
+
+            <article class="cards-en">
+                <img src="IMG/Encargados/Juan B.jpg">
+                <div class="card-content">
+                    <h3>Zona 3</h3>
+                    <h4>GM. Juan Brito</h4>
+                </div>
+            </article>
+
+             <article class="cards-en">
+                <img src="IMG/Encargados/Pedro H.jpg">
+                <div class="card-content">
+                    <h3>Zona 4</h3>
+                    <h4>GM. Pedro Hodge</h4>
+                </div>
+            </article>
+
+            <article class="cards-en">
+                <img src="IMG/Encargados/Raulin C.jpg">
+                <div class="card-content">
+                    <h3>Zona 5</h3>
+                    <h4>GM. Raulin Concepción</h4>
+                </div>
+            </article>
+
+            <article class="cards-en">
+                <img src="IMG/Encargados/Yoel C.jpg">
+                <div class="card-content">
+                    <h3>Zona 6</h3>
+                    <h4>GM. Yoel Cueto</h4>
+                </div>
+            </article>
+
+            <article class="cards-en">
+                <img src="IMG/Encargados/Johathan W.jpg">
+                <div class="card-content">
+                    <h3>Zona 7</h3>
+                    <h4>GM. Johathan Weinum</h4>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+</body>
+<script src="JS/index.js"></script>
+
 </html>
