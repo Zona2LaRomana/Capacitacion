@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,24 @@ body{
 
 
 }
-.login-box{
+
+.form-container {
+
+    background-color: #cfe1e7;
+    border-radius: 20px;
+    padding: 0 17px 17px 17px;
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.8);
+
+}
+
+.form-container img {
+    width: 100%;
+    margin-top: -30px;
+    margin-bottom: 0px;
+
+}
+
+.login-box {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -27,47 +45,58 @@ body{
     height: 480px;
     padding: 30px;
 }
-.login-header{
+
+.login-header {
     text-align: center;
-    margin: 20px 0 40px 0;
+    margin: -50px 0 30px 0;
 }
-.login-header header{
-    color: #03A6A6;
+
+.login-header header {
+    color: #0B7285;
     font-size: 30px;
     font-weight: 600;
 }
-.input-box .input-field{
+
+.input-box .input-field {
     width: 100%;
     height: 60px;
     font-size: 17px;
     padding: 0 25px;
     margin-bottom: 15px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: none;
     box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.05);
     outline: none;
-    transition: all .3s ease;
+    /*transition: all .3s ease;*/
 }
-::placeholder{
+
+::placeholder {
     font-weight: 500;
     color: #F28705;
 }
-.input-field:focus{
+
+/*.input-field:focus {
     width: 105%;
-}
-.input-submit{
+}*/
+
+.input-submit {
     position: relative;
 }
-.submit-btn{
+
+.submit-btn {
     width: 100%;
     height: 60px;
-    background: #03A6A6;
+    background: #0B7285;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
     transition: all .3s ease;
+    align-items: center;
+    color: #fff;
+    font-size: 19px;
 }
-.input-submit label{
+
+/*.input-submit label {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -76,8 +105,10 @@ body{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     cursor: pointer;
-}
-.submit-btn:hover{
+}*/
+
+.submit-btn:hover {
     background: #F2E6D0;
-    transform: scale(1.05,1);
+    color: black;
+    transform: scale(1.03, 1);
 }

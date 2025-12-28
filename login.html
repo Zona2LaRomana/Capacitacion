@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="IMG/Icons/IconoCapacitacionesADE.png" type="image/x-icon">
-        <title>Acceso | Capacitación 2025</title>
 
-        <!--Links para los CSS-->
-        <link rel="stylesheet" href="CSS/login.css">
-    </head>
-    <body>
-        <form class="login-box" id="loginForm">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/Icons/IconoCapacitacionesADE.png" type="image/x-icon">
+    <title>Acceso | Capacitación 2025</title>
+
+    <!--Links para los CSS-->
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+    <form class="login-box" id="loginForm">
+        <div class="form-container">
+            <img src="IMG/Icons/logo-CADE.png" alt="Logo">
             <div class="login-header">
-                <header>Acceso</header>
+                <header>Inicio de Sesión</header>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" id="txtUser" placeholder="Correo / Email" autocomplete="off" required>
+                <input type="text" class="input-field" id="txtUser" placeholder="Correo / Email" autocomplete="off"
+                    required>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" id="txtPass" placeholder="Contraseña" autocomplete="off" required>
+                <input type="password" class="input-field" id="txtPass" placeholder="Contraseña" autocomplete="off"
+                    required>
             </div>
             <div class="input-submit">
-                <button class="submit-btn" id="submit"></button>
-                <label for="submit">Acceder</label>
+                <button class="submit-btn" id="submit">Acceder</button>
+                <!--<label for="submit">Acceder</label>-->
                 <p id="mensaje" style="color: red;"></p>
             </div>
-        </form>
-    </body>
-    <script src="JS/login.js"></script>
+        </div>
+
+    </form>
+</body>
+<script src="JS/login.js"></script>
+
 </html>
