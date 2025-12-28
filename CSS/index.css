@@ -30,6 +30,8 @@ header {
     left: 0;
     width: 100%;
     padding: 20px;
+    
+    
 
 }
 
@@ -55,7 +57,9 @@ header .navbar {
     padding: 4rem 6%;
     width: 100%;
     height: 60vh;
-    background-color: #F7941D;
+    /*background-color: #F7941D;*/
+    background: #F7941D;
+    background: linear-gradient(90deg, rgba(247, 148, 29, 1) 0%, rgba(179, 87, 7, 1) 100%);
 }
 
 .certificaiones-actuales h2 {
@@ -206,6 +210,7 @@ header .navbar {
     color: #037F8C;
     text-decoration: none;
     transition: 0.2s ease;
+    font-weight: bold;
 }
 
 .navbar a:hover {
@@ -213,6 +218,7 @@ header .navbar {
 }
 
 .hero-section {
+    
     height: 100vh;
     display: flex;
     align-items: center;
@@ -315,10 +321,20 @@ footer .footer-container span {
 @media screen and (max-width: 900px) {
     body {
         background: url("../IMG/Fondo-Inicio.jpg");
+        width: 100%;
+        
         background-repeat: no-repeat;
         background-size: contain;
-        height: 100vh;
+        height: 100%;
 
+    }
+
+    body .logo-right {
+        position: absolute;
+        top: 70px;
+        right: -200px;
+        width: 1050px;
+        z-index: 100px;
     }
 
     header.show-mobile-menu::before {
@@ -425,7 +441,7 @@ footer .footer-container span {
         margin-top: 190px;
         margin-right: 27px;
         margin-left: 27px;
-    
+
     }
 
 
