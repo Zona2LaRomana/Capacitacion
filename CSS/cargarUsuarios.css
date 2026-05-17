@@ -1,0 +1,55 @@
+.contenedor-tabla{
+    display: none;
+    background: #fff;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    max-height: 450px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.contenedor-tabla table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: .5em;
+}
+.contenedor-tabla thead{
+    position: sticky;
+    top: 0;
+    background: white;
+}
+.contenedor-tabla th, td{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.contenedor-tabla th{
+    background: #007BFF;
+    color: #fff;
+}
+.contenedor-tabla button{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.contenedor-tabla button:hover{
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #333;
+}
+.contenedor-tabla #regUsuarios{
+    display: none;
+}
+#totalDeRegistros{
+    color: #35be13;
+    margin-top: 15px;
+}
