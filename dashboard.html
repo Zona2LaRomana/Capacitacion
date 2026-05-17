@@ -10,9 +10,15 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.2/dist/sweetalert2.min.css">
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.2/dist/sweetalert2.all.min.js"></script>  
+        <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>      
+
         <link rel="stylesheet" href="CSS/dashboard.css">
         <link rel="stylesheet" href="CSS/recursos.css">
         <link rel="stylesheet" href="CSS/tablaAsignaciones.css">
+        <link rel="stylesheet" href="CSS/tablaParticipantes.css">
+        <link rel="stylesheet" href="CSS/checkbox.css">
+        <link rel="stylesheet" href="CSS/cargarUsuarios.css">
     </head>
     <body>
         <div class="container">
@@ -80,6 +86,9 @@
                         </a>
                         <a href="https://drive.google.com/file/d/15guQlmBzcBY7xFb-gcoR2Y_EIFIJyVlR/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Multimedia">
                             <img src="IMG/Recursos/ideales.JPG" alt="">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1jQGc7c8mVUaZYIFs4QxJfVebJDAfu-tx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Manuales">
+                            <img src="IMG/Recursos/uniformidad.png" alt="">
                         </a>
                         <a href="https://drive.google.com/file/d/1SXvEtcgCj5Z2YZSmmbAg3jvITYG3tf9q/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="pic Manuales">
                             <img src="IMG/ManualAventureros.png" alt="">
@@ -162,32 +171,65 @@
                                 </tr>                                
                             </thead>
                             <tbody id="tbody-evaluaciones">
-
                             </tbody>
                         </table>
                     </div>
-                    <!--
-                    <div class="paginacion">
-                        <div><i class='bx bx-chevrons-left'></i></div>
-                        <div><i class='bx bx-chevron-left' ></i></div>
-                        <div>1</div>
-                        <div>2</div>
-                        <div><i class='bx bx-chevron-right' ></i></div>
-                        <div><i class='bx bx-chevrons-right' ></i></div>
-                    </div>
-                </div>-->
+                </div>
                 <!--Sección para Las Evaluaciones-->
+                <!--Sección para El Registro de los Participantes-->
+                <div class="tabl" name="participantes">
+                    <div class="table_header">
+                        <div class="table_header">
+                            <p>Registro de Participantes</p>
+                            <!--<div>
+                                <input class="txtBuscar" type="text" placeholder="Buscar Participante" id="txtBuscarParticipantes">
+                            </div>-->
+                        </div>
+                        <div class="table_section">
+                        <table id="tParticipantes">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Participante</th>
+                                    <th>Teléfono</th>
+                                    <th>Distrito</th>
+                                    <th>Básica de Aventureros</th>
+                                    <th>Básica de Conquistadores</th>
+                                    <th>Director de Aventureros</th>
+                                    <th>Director de Conquistadores</th>
+                                    <th>Consejero de Conquistadores</th>
+                                    <th></th>
+                                </tr>                                
+                            </thead>
+                            <tbody id="tbody-participantes">
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+                <!--Sección para El Registro de los Participantes-->
+                <!--Sección para agregar a los nuevos usuarios-->
+                <div class="contenedor-tabla" name="registroExcel">
+                    <h2>Integración de nuevos Participantes</h2>
+                    <input type="file" id="archivoExcel" accept=".xlsx">
+                    <button onclick="leerExcel()">Leer Archivo</button>
+                    <p id="totalDeRegistros"></p>
+                    <button id="regUsuarios" onclick="procesarDatosTabla()">Registrar Nuevos Usuarios</button>
+                    <div id="tablaUsuarios"></div>
+                </div>
+                <!--Sección para agregar a los nuevos usuarios-->
             </section>
         </div>        
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.2/dist/sweetalert2.all.min.js"></script>
-    <script src="JS/actividad.js"></script>
-    <script src="JS/dashboard.js"></script>
-    <script src="JS/navBar.js"></script>
-    <script src="JS/entregarTarea.js"></script>
-    <script src="JS/tablaTareas.js"></script>
-    <script src="JS/registrarEvaluacion.js"></script>
-    <script src="JS/busquedaEvaluaciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>    
+    <script src="JS/actividad.js?v=2.3"></script>
+    <script src="JS/dashboard.js?v=2.3"></script>
+    <script src="JS/navBar.js?v=2.3"></script>
+    <script src="JS/entregarTarea.js?v=2.3"></script>
+    <script src="JS/tablaTareas.js?v=2.3"></script>
+    <script src="JS/registrarEvaluacion.js?v=2.3"></script>
+    <script src="JS/busquedaEvaluaciones.js?v=2.3"></script>
+    <script src="JS/tablaParticipantes.js?v=2.3"></script>
+    <script src="JS/cargarLecturaExcel.js?=1.0"></script>
 
 </html>
-

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="IMG/Icons/IconoCapacitacionesADE.png" type="image/x-icon">
+        <title>Formulario de Registro</title>
+
+        <link rel="stylesheet" href="CSS/inscripcionCertificacion.css">
+    </head>
+    <body>
+        <div class="formulario">
+            <h2>Formulario de Inscripción <br>Certificaciones</h2>
+            <label for="txtNombreApellido">Nombre Completo</label>
+            <input type="text" id="txtNombreApellido" class="texto" required>
+
+            <label for="txtCorreo">Correo / Email</label>
+            <input type="mail" id="txtCorreo" class="texto" required>
+
+            <label for="txtTelefono">Teléfono / Celular</label>
+            <input type="phone" id="txtTelefono" class="texto" required>
+
+            <label for="txtZona">Zona a la Que Pertenece</label>
+            <input type="number" id="txtZona" class="texto" required>
+
+            <label for="txtDistrito">Distrito</label>
+            <input type="number" id="txtDistrito" class="texto" required>
+
+            <label for="participante">Tipo de Participante</label>
+            <select name="participante" id="ddlTipoParticipante">
+                <option value="">Seleccione una Opción</option>
+                <option value="1">Oficial de Zona</option>
+                <option value="2">Líder de Club</option>
+            </select>
+
+            <label for="certificaciones">Certificaciones a Cursar</label>
+            <div class="checkbox-group">
+                <div class="group">
+                    <label for="ba_AV">Básica de Aventureros</label>
+                    <input type="checkbox" name="certificaciones" id="ba_AV" value="1">
+                    <label for="ba_AV" class="label"></label>
+                </div>
+                <div class="group">
+                    <label for="ba_PA">Básica de Conquistadores</label>
+                    <input type="checkbox" name="certificaciones" id="ba_PA">
+                    <label for="ba_PA" class="label"></label>
+                </div>
+                <div class="group">
+                    <label for="di_AV">Director de Aventureros</label>
+                    <input type="checkbox" name="certificaciones" id="di_AV">
+                    <label for="di_AV" class="label"></label>
+                </div>
+                <div class="group">
+                    <label for="di_PA">Director de Conquistadores</label>
+                    <input type="checkbox" name="certificaciones" id="di_PA">
+                    <label for="di_PA" class="label"></label>
+                </div>
+                <div class="group">
+                    <label for="co_PA">Consejero Conquistadores</label>
+                    <input type="checkbox" name="certificaciones" id="co_PA">
+                    <label for="co_PA" class="label"></label>
+                </div>
+            </div>
+
+            <label for="">¿Tiene Certificaciones Anteriores?</label>
+            <select name="previas" id="ddlPrevias" onchange="mostrarCertificacionesPrevias()">
+                <option value="">Selecciones</option>
+                <option value="1">Si</option>
+                <option value="0">No</option>
+            </select>
+            
+            <div class="hidden" id="campoCertificacionesPrevias">
+                <input type="text" name="" id="txtCertificacionesPrevias" class="texto" placeholder="Escriba Aqui las Certificaciones que ya ha realizado">
+            </div>
+
+            <button onclick="procesoRegistro()">Enviar Inscripción</button>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="JS/inscripcionCertificacion.js?v=2.3"></script>
+    <script src="JS/registrarUsuario.js?v=2.3"></script>
+</html>
