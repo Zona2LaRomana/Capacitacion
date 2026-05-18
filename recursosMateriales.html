@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="IMG/Icons/IconoCapacitacionesADE.png" type="image/x-icon">
+    <title>Recursos y Materiales</title>
+    <link rel="stylesheet" href="CSS/recursosMateriales.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span class="brand-name">Capacitaciones ADE</span>
+        </div>
+    </nav>
+
+    <!-- HERO / SELECTOR -->
+    <section class="hero-selector">
+        <div class="hero-content">
+            <h1 class="hero-title">Recursos y Materiales</h1>
+            <p class="hero-subtitle">Selecciona una categoría para explorar el contenido disponible</p>
+        </div>
+
+        <div class="category-grid">
+
+            <button class="cat-btn" data-category="multimedia">
+                <div class="cat-icon cat-icon--img">
+                    <img src="IMG/Icons/Multimedia.png" alt="Multimedia" onerror="this.parentElement.innerHTML='<i class=\'bx bxs-star\'></i>'">
+                </div>
+                <span>Multimedia</span>
+            </button>
+
+            <button class="cat-btn" data-category="manuales">
+                <div class="cat-icon cat-icon--img">
+                    <img src="IMG/Icons/Manuales.png" alt="Manuales" onerror="this.parentElement.innerHTML='<i class=\'bx bxs-star\'></i>'">
+                </div>
+                <span>Manuales</span>
+            </button>
+
+            <button class="cat-btn" data-category="cartas">
+                <div class="cat-icon cat-icon--img">
+                    <img src="IMG/Icons/Carta.png" alt="Carta" onerror="this.parentElement.innerHTML='<i class=\'bx bxs-star\'></i>'">
+                </div>
+                <span>Cartas</span>
+            </button>
+
+            <button class="cat-btn" data-category="aventureros">
+                <div class="cat-icon cat-icon--img">
+                    <img src="IMG/Icons/LogoAventureros.png" alt="Aventureros" onerror="this.parentElement.innerHTML='<i class=\'bx bxs-star\'></i>'">
+                </div>
+                <span>Aventureros</span>
+            </button>
+
+            <button class="cat-btn" data-category="conquistadores">
+                <div class="cat-icon cat-icon--img">
+                    <img src="IMG/Icons/Emblema_del_Club_de_Conquistadores.svg.png" alt="Conquistadores" onerror="this.parentElement.innerHTML='<i class=\'bx bxs-shield\'></i>'">
+                </div>
+                <span>Conquistadores</span>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- CONTENT AREA -->
+    <section class="content-area" id="contentArea" style="display:none;">
+
+        <div class="content-header">
+            <div class="content-header-left">
+                <button class="back-btn" id="backBtn"><i class='bx bx-arrow-back'></i> Volver</button>
+                <h2 class="content-title" id="contentTitle"></h2>
+            </div>
+            <span class="item-count" id="itemCount"></span>
+        </div>
+
+        <div class="recursos-grid" id="recursosGrid">
+            <!-- Cards inyectadas por JS -->
+        </div>
+    </section>
+
+    <script src="JS/recursosMateriales.js"></script>
+</body>
+</html>
